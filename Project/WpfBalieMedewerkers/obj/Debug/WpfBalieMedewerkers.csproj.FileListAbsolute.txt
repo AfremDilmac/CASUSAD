@@ -1,0 +1,17 @@
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\WpfBalieMedewerkers.exe.config
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\WpfBalieMedewerkers.exe
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\WpfBalieMedewerkers.pdb
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.csprojAssemblyReference.cache
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\LoginWindowWindow1.g.cs
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\MainWindow.g.cs
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\App.g.cs
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers_MarkupCompile.cache
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers_MarkupCompile.lref
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\LoginWindowWindow1.baml
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\MainWindow.baml
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.g.resources
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.Properties.Resources.resources
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.csproj.GenerateResource.cache
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.csproj.CoreCompileInputs.cache
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.exe
+C:\Users\32497\Desktop\casusAD\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.pdb
