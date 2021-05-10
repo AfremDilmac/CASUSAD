@@ -17,12 +17,12 @@ using System.Windows.Shapes;
 namespace WpfBalieMedewerkers
 {
     /// <summary>
-    /// Logique d'interaction pour LoginWindowWindow1.xaml
+    /// Logique d'interaction pour WpfLogin.xaml
     /// </summary>
-    public partial class LoginWindowWindow1 : Window
+    public partial class WpfLogin : Window
     {
         string connString = ConfigurationManager.AppSettings["connString"];
-        public LoginWindowWindow1()
+        public WpfLogin()
         {
             InitializeComponent();
         }
@@ -34,13 +34,13 @@ namespace WpfBalieMedewerkers
                 conn.Open();
                 SqlCommand comm = new SqlCommand("SELECT  code_pasje, passwoord FROM Medewerker", conn);
                 SqlDataReader reader = comm.ExecuteReader();
-        
+
                 while (reader.Read())
                 {
                     string code = Convert.ToString(reader["code_pasje"]);
                     string passwoord = Convert.ToString(reader["passwoord"]);
 
-                    if (tbxGebruikersnaam.Text == code && tbxWachtwoord.Text == passwoord)
+                    if (tbxGebruikersnaam.Text == code && tbxWachtwoord.Password == passwoord)
                     {
                         MainWindow sW = new MainWindow();
                         sW.Show();
@@ -52,8 +52,6 @@ namespace WpfBalieMedewerkers
                     }
                 }
             }
-
-
         }
     }
 }

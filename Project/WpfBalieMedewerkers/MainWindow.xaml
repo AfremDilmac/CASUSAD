@@ -6,18 +6,22 @@
         xmlns:local="clr-namespace:WpfBalieMedewerkers"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFA45D5D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="270"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="550"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <ListBox Grid.Column="0" x:Name="lbxResults" HorizontalAlignment="Left" Height="343" Margin="29,33,0,0" VerticalAlignment="Top" Width="417" SelectionChanged="lbxResults_SelectionChanged"/>
-        <StackPanel Grid.Column="1">
-            <Label Content="Voornaam:" FontWeight="Bold"></Label>
-            <Label x:Name="lblVoornaam"></Label>
-            <Label Content="Achternaam:" FontWeight="Bold"></Label>
-            <Label x:Name="lblAchternaam"></Label>
-            <Button x:Name="btnFetch" Content="FETCH" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Height="34" Click="btnFetch_Click"/>
-        </StackPanel>
+        <Button Height="50" Width="50" Grid.Column="1" x:Name="btnHome" MinWidth="100" Margin="10,0,0,0"  Background="#FF833636" Content="Home" Foreground="White" BorderBrush="Black" HorizontalAlignment="Center" Click="btnHome_Click" VerticalAlignment="Center"/>
+        <Button Height="50" Width="50" Grid.Row="1" Grid.Column="2" x:Name="btnMedewerkers" MinWidth="100" Margin="10,0,0,0" Content="Medewerkers" Click="btnClickMedewerker" Background="#FF833636" Foreground="White" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Height="50" Width="50" Grid.Row="1" Grid.Column="0" x:Name="btnLeden" MinWidth="100" Margin="10,0,0,0" Click="btnClickLid" Background="#FF833636" Content="Leden" Foreground="White" BorderBrush="Black"  VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
+        <Button Height="50" Width="50" Grid.Row="2" Grid.Column="1" x:Name="btnItems" MinWidth="100" Margin="10,0,0,0" Click="btnClickItems" Background="#FF833636" Content="Items" Foreground="White" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" x:Name="Main" Margin="10,10,10,21" NavigationUIVisibility="Hidden"/>
+        <Image x:Name="imgHome" Grid.Column="1" HorizontalAlignment="Center" Height="180" Width="250" Grid.Row="1" VerticalAlignment="Center" Source="download.gif"/>
     </Grid>
 </Window>

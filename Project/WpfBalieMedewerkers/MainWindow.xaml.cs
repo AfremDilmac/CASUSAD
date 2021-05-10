@@ -22,55 +22,36 @@ namespace WpfBalieMedewerkers
     /// </summary>
     public partial class MainWindow : Window
     {
-        string connString = ConfigurationManager.AppSettings["connString"];
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void btnFetch_Click(object sender, RoutedEventArgs e)
+        private void btnClickMedewerker(object sender, RoutedEventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker", conn);
-                SqlDataReader reader = comm.ExecuteReader();
-                lbxResults.Items.Clear();
-                while (reader.Read())
-                {
-                    int id = Convert.ToInt32(reader["ID"]);
-                    string firstname = Convert.ToString(reader["voornaam"]); 
-                    string lastname = Convert.ToString(reader["achternaam"]);
-                    ListBoxItem li = new ListBoxItem();
-                    li.Tag = id;
-                    li.Content = $"{id}: {firstname} {lastname}";
-                    lbxResults.Items.Add(li);
-
-                }
-            }
-
+            Main.Content = new Medewerker();
+            imgHome.Visibility = Visibility.Hidden;
         }
 
-        private void lbxResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
+      
+
+        private void btnClickLid(object sender, RoutedEventArgs e)
         {
-            ListBoxItem li = (ListBoxItem)lbxResults.SelectedItem;
-            if (li == null) return;
-            int id = (int)li.Tag;
+            Main.Content = new Lid();
+            imgHome.Visibility = Visibility.Hidden;
+        }
 
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker WHERE ID = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", id);
-                SqlDataReader reader = comm.ExecuteReader();
-                reader.Read();
-                    string firstname = Convert.ToString(reader["voornaam"]);
-                    string lastname = Convert.ToString(reader["achternaam"]);
-                lblAchternaam.Content = lastname;
-                lblVoornaam.Content = firstname;
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MainWindow();
+            imgHome.Visibility = Visibility.Visible;
+        }
 
-            }
+        private void btnClickItems(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Items();
+            imgHome.Visibility = Visibility.Hidden;
         }
     }
 }

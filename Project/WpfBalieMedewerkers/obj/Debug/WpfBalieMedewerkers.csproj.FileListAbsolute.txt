@@ -39,5 +39,11 @@ C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\Syst
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\System.Security.Permissions.xml
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfBalieMedewerkers.csproj.CopyComplete
-C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\LoginWindow.g.cs
-C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\LoginWindow.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Lid.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Medewerker.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Lid.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Medewerker.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Items.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Items.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfLogin.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfLogin.baml

@@ -1,0 +1,15 @@
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\WpfLeden.exe.config
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\WpfLeden.exe
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\WpfLeden.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csprojAssemblyReference.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\MainWindow.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\App.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden_MarkupCompile.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden_MarkupCompile.lref
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\MainWindow.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.g.resources
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.Properties.Resources.resources
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csproj.GenerateResource.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csproj.CoreCompileInputs.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.exe
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.pdb
