@@ -18,15 +18,14 @@
         </Grid.ColumnDefinitions>
         <Image Grid.Row="0" Grid.Column="1" Source="download.gif" ></Image>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <Label Content="Gebruikersnaam:"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
-            <Label Content="Wachtwoord:"/>
-            <TextBox Height="23" TextWrapping="Wrap" Text=""/>
-            <Button Margin="0,20,0,0" Content="Inloggen"/>
-
-
-
-
+            <Label Content="Gebruikersnaam:" Foreground="White"/>
+            <TextBox x:Name="tbxGebruikersnaam" Height="23" TextWrapping="Wrap" Text=""/>
+            <Label Content="Wachtwoord:" Foreground="White"/>
+            <TextBox x:Name="tbxWachtwoord" Height="23" TextWrapping="Wrap" Text=""/>
+            <Button x:Name="btnLogin" Margin="0,20,0,0" Content="Inloggen" FontSize="14" Click="Button_Click"/>
+            <Label Margin="0,20,0,0" x:Name="lblError"  Grid.ColumnSpan="2"/>
         </StackPanel>
- </Grid>
+
+
+    </Grid>
 </Window>

@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="550"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <ListBox Grid.Column="0" x:Name="lbxResults" HorizontalAlignment="Left" Height="343" Margin="29,33,0,0" VerticalAlignment="Top" Width="417" SelectionChanged="lbxResults_SelectionChanged"/>
+        <StackPanel Grid.Column="1">
+            <Label Content="Voornaam:" FontWeight="Bold"></Label>
+            <Label x:Name="lblVoornaam"></Label>
+            <Label Content="Achternaam:" FontWeight="Bold"></Label>
+            <Label x:Name="lblAchternaam"></Label>
+            <Button x:Name="btnFetch" Content="FETCH" HorizontalAlignment="Left" VerticalAlignment="Top" Width="121" Height="34" Click="btnFetch_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
