@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBalieMedewerkers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Home" Height="450" Width="800">
     <Grid Background="#FFA45D5D">
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>

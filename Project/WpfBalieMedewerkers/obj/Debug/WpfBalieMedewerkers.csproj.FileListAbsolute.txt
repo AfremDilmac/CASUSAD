@@ -47,3 +47,6 @@ C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Item
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Items.baml
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfLogin.g.cs
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfLogin.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.dll.config

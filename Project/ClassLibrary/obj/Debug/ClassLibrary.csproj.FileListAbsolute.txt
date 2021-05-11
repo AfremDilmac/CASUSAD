@@ -1,0 +1,7 @@
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ClassLibrary\bin\Debug\ClassLibrary.dll.config

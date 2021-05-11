@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfBalieMedewerkers"
         mc:Ignorable="d"
-        Title="WpfLogin" Height="450" Width="400">
+        Title="Login" Height="450" Width="400">
     <Grid Background="#FFA45D5D">
         <Grid.RowDefinitions>
             <RowDefinition Height="175"></RowDefinition>

@@ -145,5 +145,11 @@
   <ItemGroup>
     <Resource Include="download.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{ba1ad1fb-b881-47b5-908c-56a5ac35f04e}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

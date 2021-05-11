@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassLibrary;
 
 namespace WpfBalieMedewerkers
 {
@@ -29,25 +30,17 @@ namespace WpfBalieMedewerkers
         string connString = ConfigurationManager.AppSettings["connString"];
         private void btnFetch_Click(object sender, RoutedEventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            //Clear
+            lbxResults.Items.Clear();
+            //Load
+            List<Library> mwrs = Library.GetAll();
+            foreach (Library mwr in mwrs)
             {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker", conn);
-                SqlDataReader reader = comm.ExecuteReader();
-                lbxResults.Items.Clear();
-                while (reader.Read())
-                {
-                    int id = Convert.ToInt32(reader["ID"]);
-                    string firstname = Convert.ToString(reader["voornaam"]);
-                    string lastname = Convert.ToString(reader["achternaam"]);
-                    ListBoxItem li = new ListBoxItem();
-                    li.Tag = id;
-                    li.Content = $"{id}: {firstname} {lastname}";
-                    lbxResults.Items.Add(li);
-
-                }
+                ListBoxItem li = new ListBoxItem();
+                li.Content = mwr.ToString();
+                li.Tag = mwr.Id;
+                lbxResults.Items.Add(li);
             }
-
         }
 
         private void lbxResults_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -55,26 +48,39 @@ namespace WpfBalieMedewerkers
             ListBoxItem li = (ListBoxItem)lbxResults.SelectedItem;
             if (li == null) return;
             int id = (int)li.Tag;
+            Library mwd = Library.GetById(id);
+            string firstname = mwd.Voornaam;
+            string lastname = mwd.Achternaam;
+            lblAchternaam.Content = lastname;
+            lblVoornaam.Content = firstname;
 
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker WHERE ID = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", id);
-                SqlDataReader reader = comm.ExecuteReader();
-                reader.Read();
-                string firstname = Convert.ToString(reader["voornaam"]);
-                string lastname = Convert.ToString(reader["achternaam"]);
-                lblAchternaam.Content = lastname;
-                lblVoornaam.Content = firstname;
-
-            }
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
 
-            
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            //Ask Id
+            ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
+            if (item == null) return;
+            int employeeId = Convert.ToInt32(item.Tag);
+
+            //Ask confirmation
+            MessageBoxResult result = MessageBox.Show($"Ben je zeket dat je werknemer #{employeeId} wil verwijderen?", "Werknemer verwijderen", MessageBoxButton.YesNo);
+            if (result != MessageBoxResult.Yes) return;
+
+            //Verwijder werknemer
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("DELETE FROM Contacts WHERE ID = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", employeeId);
+                comm.ExecuteNonQuery();
+                lbxResults.Items.Remove(lbxResults.SelectedItem);
+            }
         }
     }
 }
