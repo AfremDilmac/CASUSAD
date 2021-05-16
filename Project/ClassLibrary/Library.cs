@@ -38,6 +38,27 @@ namespace ClassLibrary
             return mwrs;
         }
 
+        public static Library FindById(int empId)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                // open connectie
+                conn.Open();
+
+                // voer SQL commando uit
+                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker WHERE ID = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", empId);
+                SqlDataReader reader = comm.ExecuteReader();
+
+                // lees en verwerk resultaten
+                if (!reader.Read()) return null;
+                int id = Convert.ToInt32(reader["id"]);
+                string firstname = Convert.ToString(reader["voornaam"]);
+                string lastname = Convert.ToString(reader["achternaam"]);
+                return new Library(id, firstname, lastname);
+            }
+        }
+
         public static Library GetById(int id) {
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -53,15 +74,42 @@ namespace ClassLibrary
         }
 
         public void DeleteFromDb() {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("DELETE FROM Medewerker WHERE ID = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", Id);
+                comm.ExecuteNonQuery();
+            }
         }
 
-        public void UpdateInDb() {
-            throw new NotImplementedException();
+        public void UpdateInDb()
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                    @"UPDATE Medewerker
+                        SET voornaam=@parF, achternaam=@parL
+                        WHERE ID = @parID"
+                    , conn);
+                comm.Parameters.AddWithValue("@parF", Voornaam);
+                comm.Parameters.AddWithValue("@parL", Achternaam);
+                comm.Parameters.AddWithValue("@parID", Id);
+                comm.ExecuteNonQuery();
+            }
         }
 
         public int InsertInDb() {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand(
+                  "INSERT INTO Medewerker(voornaam,achternaam) output INSERTED.ID VALUES(@par1,@par2)", conn);
+                comm.Parameters.AddWithValue("@par1", Voornaam);
+                comm.Parameters.AddWithValue("@par2", Achternaam);
+                return (int)comm.ExecuteScalar();
+            }
         }
 
         //constructors

@@ -13,3 +13,9 @@ C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csproj
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csproj.CoreCompileInputs.cache
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.exe
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\ClassLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\ClassLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\bin\Debug\ClassLibrary.dll.config
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLogin.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLogin.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfLeden\obj\Debug\WpfLeden.csproj.CopyComplete

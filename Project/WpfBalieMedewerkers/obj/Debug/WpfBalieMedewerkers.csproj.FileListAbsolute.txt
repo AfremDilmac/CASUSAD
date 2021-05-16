@@ -50,3 +50,7 @@ C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\WpfL
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.dll
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.pdb
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ClassLibrary.dll.config
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\EditWindow.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\EditWindow.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Insert.g.cs
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Insert.baml

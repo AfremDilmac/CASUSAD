@@ -74,9 +74,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditWindow.xaml.cs">
+      <DependentUpon>EditWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Insert.xaml.cs">
+      <DependentUpon>Insert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WpfLogin.xaml.cs">
       <DependentUpon>WpfLogin.xaml</DependentUpon>
     </Compile>
+    <Page Include="EditWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Insert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Items.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

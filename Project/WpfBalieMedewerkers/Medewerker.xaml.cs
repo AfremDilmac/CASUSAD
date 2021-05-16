@@ -26,8 +26,26 @@ namespace WpfBalieMedewerkers
         public Medewerker()
         {
             InitializeComponent();
+            ReloadEmployees(null);
         }
         string connString = ConfigurationManager.AppSettings["connString"];
+        public void ReloadEmployees(int? selectedId)
+        {
+            // wis de lijst
+            lbxResults.Items.Clear();
+
+            // laad alle werknemers in
+            List<Library> allEmps = Library.GetAll();
+            foreach (Library emp in allEmps)
+            {
+                ListBoxItem item = new ListBoxItem();
+                item.Content = emp.ToString();
+                item.Tag = emp.Id;
+                item.IsSelected = selectedId == emp.Id;
+                lbxResults.Items.Add(item);
+            }
+        }
+
         private void btnFetch_Click(object sender, RoutedEventArgs e)
         {
             //Clear
@@ -63,24 +81,33 @@ namespace WpfBalieMedewerkers
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            //Ask Id
+            // vraag id geselecteerde werknemer op
             ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
-            if (item == null) return;
             int employeeId = Convert.ToInt32(item.Tag);
+            Library emp = Library.FindById(employeeId);
 
-            //Ask confirmation
-            MessageBoxResult result = MessageBox.Show($"Ben je zeket dat je werknemer #{employeeId} wil verwijderen?", "Werknemer verwijderen", MessageBoxButton.YesNo);
+            // vraag bevestiging
+            MessageBoxResult result = MessageBox.Show($"Ben je zeker dat je werknemer #{employeeId} wil verwijderen?", "Werknemer verwijderen", MessageBoxButton.YesNo);
             if (result != MessageBoxResult.Yes) return;
 
-            //Verwijder werknemer
-            using (SqlConnection conn = new SqlConnection(connString))
-            {
-                conn.Open();
-                SqlCommand comm = new SqlCommand("DELETE FROM Contacts WHERE ID = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", employeeId);
-                comm.ExecuteNonQuery();
-                lbxResults.Items.Remove(lbxResults.SelectedItem);
-            }
+            // verwijder werknemer
+            emp.DeleteFromDb();
+            ReloadEmployees(null);
+        
+        }
+
+        private void btnModify_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem item = (ListBoxItem)lbxResults.SelectedItem;
+            int employeeId = Convert.ToInt32(item.Tag);
+            EditWindow editWin = new EditWindow(this, employeeId);
+            editWin.Show();
+        }
+
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            Insert newWin = new Insert(this);
+            newWin.Show();
         }
     }
 }
