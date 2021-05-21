@@ -28,7 +28,7 @@ namespace WpfBalieMedewerkers
             InitializeComponent();
             ReloadEmployees(null);
         }
-        string connString = ConfigurationManager.AppSettings["connString"];
+     
         public void ReloadEmployees(int? selectedId)
         {
             // wis de lijst
@@ -40,13 +40,13 @@ namespace WpfBalieMedewerkers
             {
                 ListBoxItem item = new ListBoxItem();
                 item.Content = emp.ToString();
-                item.Tag = emp.Id;
-                item.IsSelected = selectedId == emp.Id;
+                item.Tag = emp.Lidnummer;
+                item.IsSelected = selectedId == emp.Lidnummer;
                 lbxResults.Items.Add(item);
             }
         }
 
-        private void btnFetch_Click(object sender, RoutedEventArgs e)
+        public void btnFetch_Click(object sender, RoutedEventArgs e)
         {
             //Clear
             lbxResults.Items.Clear();
@@ -56,7 +56,7 @@ namespace WpfBalieMedewerkers
             {
                 ListBoxItem li = new ListBoxItem();
                 li.Content = mwr.ToString();
-                li.Tag = mwr.Id;
+                li.Tag = mwr.Lidnummer;
                 lbxResults.Items.Add(li);
             }
         }
@@ -69,8 +69,24 @@ namespace WpfBalieMedewerkers
             Library mwd = Library.GetById(id);
             string firstname = mwd.Voornaam;
             string lastname = mwd.Achternaam;
+            string geboortedatum = mwd.Geboortedatum;
+            string straat = mwd.Straat;
+            int nummer = mwd.Nummer;
+            int postcode = mwd.Postcode;
+            string gemeente = mwd.Gemeente;
+            string vervaldatum = mwd.Vervaldatum_Lidkaart;
+            string gsm = mwd.Gsm;
             lblAchternaam.Content = lastname;
             lblVoornaam.Content = firstname;
+            lblDatum.Content = vervaldatum;
+            lblGeboorte.Content = geboortedatum;
+            lblGemeente.Content = gemeente;
+            lblGsm.Content = gsm;
+            lblNummer.Content = nummer;
+            lblPostcode.Content = postcode;
+            lblStraat.Content = straat;
+            
+
 
         }
 

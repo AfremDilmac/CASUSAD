@@ -13,9 +13,16 @@ namespace ClassLibrary
         //variable
         private static string connString = ConfigurationManager.AppSettings["connString"];
         //properities
-        public int Id { get; set; }
+        public int Lidnummer {get; set;}
         public string Voornaam { get; set; }
         public string Achternaam { get; set; }
+        public string Geboortedatum { get; set; }
+        public string Straat { get; set; }
+        public int Nummer { get; set; }
+        public int Postcode { get; set; }
+        public string Gemeente { get; set; }
+        public string Vervaldatum_Lidkaart { get; set; }
+        public string Gsm { get; set; }
 
         //methodes
         public static List<Library> GetAll() {
@@ -23,15 +30,24 @@ namespace ClassLibrary
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker", conn);
+                SqlCommand comm = new SqlCommand("SELECT lidnummer, voornaam, achternaam, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm FROM Lid", conn);
                 SqlDataReader reader = comm.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    int id = Convert.ToInt32(reader["ID"]);
+                    int lidnummer = Convert.ToInt32(reader["lidnummer"]);
                     string firstname = Convert.ToString(reader["voornaam"]);
                     string lastname = Convert.ToString(reader["achternaam"]);
-                    mwrs.Add(new Library(id, firstname, lastname));
+                    string geboortedatum = Convert.ToString(reader["geboortedatum"]);
+                    string straat = Convert.ToString(reader["straat"]);
+                    int nummer = Convert.ToInt32(reader["nummer"]);
+                    int postcode = Convert.ToInt32(reader["postcode"]);
+                    string gemeente = Convert.ToString(reader["gemeente"]);
+                    string vervaldatum_lidkaart = Convert.ToString(reader["vervaldatum_lidkaart"]);
+                    string gsm = Convert.ToString(reader["gsm"]);
+
+
+                    mwrs.Add(new Library(lidnummer, firstname, lastname, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm));
                 }
 
             }
@@ -46,16 +62,23 @@ namespace ClassLibrary
                 conn.Open();
 
                 // voer SQL commando uit
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker WHERE ID = @par1", conn);
+                SqlCommand comm = new SqlCommand("SELECT lidnummer, voornaam, achternaam, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm FROM Lid WHERE lidnummer = @par1", conn);
                 comm.Parameters.AddWithValue("@par1", empId);
                 SqlDataReader reader = comm.ExecuteReader();
 
                 // lees en verwerk resultaten
                 if (!reader.Read()) return null;
-                int id = Convert.ToInt32(reader["id"]);
+                int lidnummer = Convert.ToInt32(reader["lidnummer"]); ;
                 string firstname = Convert.ToString(reader["voornaam"]);
                 string lastname = Convert.ToString(reader["achternaam"]);
-                return new Library(id, firstname, lastname);
+                string geboortedatum = Convert.ToString(reader["geboortedatum"]);
+                string straat = Convert.ToString(reader["straat"]);
+                int nummer = Convert.ToInt32(reader["nummer"]);
+                int postcode = Convert.ToInt32(reader["postcode"]);
+                string gemeente = Convert.ToString(reader["gemeente"]);
+                string vervaldatum_lidkaart = Convert.ToString(reader["vervaldatum_lidkaart"]);
+                string gsm = Convert.ToString(reader["gsm"]);
+                return new Library(lidnummer, firstname, lastname, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm);
             }
         }
 
@@ -63,13 +86,20 @@ namespace ClassLibrary
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("SELECT id, voornaam, achternaam FROM Medewerker WHERE ID = @par1", conn);
+                SqlCommand comm = new SqlCommand("SELECT lidnummer, voornaam, achternaam, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm FROM Lid WHERE lidnummer = @par1", conn);
                 comm.Parameters.AddWithValue("@par1", id);
                 SqlDataReader reader = comm.ExecuteReader();
                 reader.Read();
                 string firstname = Convert.ToString(reader["voornaam"]);
                 string lastname = Convert.ToString(reader["achternaam"]);
-                return new Library(id, firstname, lastname);
+                string geboortedatum = Convert.ToString(reader["geboortedatum"]);
+                string straat = Convert.ToString(reader["straat"]);
+                int nummer = Convert.ToInt32(reader["nummer"]);
+                int postcode = Convert.ToInt32(reader["postcode"]);
+                string gemeente = Convert.ToString(reader["gemeente"]);
+                string vervaldatum_lidkaart = Convert.ToString(reader["vervaldatum_lidkaart"]);
+                string gsm = Convert.ToString(reader["gsm"]);
+                return new Library(id, firstname, lastname, geboortedatum, straat, nummer, postcode, gemeente, vervaldatum_lidkaart, gsm);
             }
         }
 
@@ -77,8 +107,8 @@ namespace ClassLibrary
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 conn.Open();
-                SqlCommand comm = new SqlCommand("DELETE FROM Medewerker WHERE ID = @par1", conn);
-                comm.Parameters.AddWithValue("@par1", Id);
+                SqlCommand comm = new SqlCommand("DELETE FROM Lid WHERE lidnummer = @par1", conn);
+                comm.Parameters.AddWithValue("@par1", Lidnummer);
                 comm.ExecuteNonQuery();
             }
         }
@@ -89,13 +119,13 @@ namespace ClassLibrary
             {
                 conn.Open();
                 SqlCommand comm = new SqlCommand(
-                    @"UPDATE Medewerker
+                    @"UPDATE Lid
                         SET voornaam=@parF, achternaam=@parL
-                        WHERE ID = @parID"
+                        WHERE lidnummer = @parID"
                     , conn);
                 comm.Parameters.AddWithValue("@parF", Voornaam);
                 comm.Parameters.AddWithValue("@parL", Achternaam);
-                comm.Parameters.AddWithValue("@parID", Id);
+                comm.Parameters.AddWithValue("@parID", Lidnummer);
                 comm.ExecuteNonQuery();
             }
         }
@@ -117,15 +147,27 @@ namespace ClassLibrary
         { 
         }
         //Medewerkers
-        public Library(int id, string vn, string an)
+        public Library(int lidnummer, string vn, string an)
         {
-            Id = id;
+            Lidnummer = lidnummer;
             Voornaam = vn;
             Achternaam = an;
         }
+
+        public Library(int lidnummer, string vn, string an, string geboortedatum, string straat, int nummer, int postcode, string gemeente, string vervaldatum_lidkaart, string gsm) : this(lidnummer, vn, an)
+        {
+            Geboortedatum = geboortedatum;
+            Straat = straat;
+            Nummer = nummer;
+            Postcode = postcode;
+            Gemeente = gemeente;
+            Vervaldatum_Lidkaart = vervaldatum_lidkaart;
+            Gsm = gsm;
+        }
+
         public override string ToString()
         {
-            return $"{Id}: {Voornaam} {Achternaam}";
+            return $"{Lidnummer}: {Voornaam} {Achternaam}";
 
         }
 

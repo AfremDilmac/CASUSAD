@@ -28,17 +28,10 @@ namespace WpfBalieMedewerkers
             InitializeComponent();
         }
 
-        private void btnClickMedewerker(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Medewerker();
-            imgHome.Visibility = Visibility.Hidden;
-        }
-
-      
 
         private void btnClickLid(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Lid();
+            Main.Content = new Medewerker();
             imgHome.Visibility = Visibility.Hidden;
         }
 

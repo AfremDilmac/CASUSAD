@@ -11,20 +11,37 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" x:Name="Main" Margin="10,10,10,21" NavigationUIVisibility="Hidden"/>
-        <ListBox  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="50,0,0,0" x:Name="lbxResults" HorizontalAlignment="Left" MinHeight="307" MinWidth="450"  SelectionChanged="lbxResults_SelectionChanged" Background="#FF833636" Foreground="White" BorderBrush="Black" VerticalAlignment="Top" Width="425"/>
-        <StackPanel Grid.Row="1" Grid.RowSpan="2" Grid.Column="2" Background="#FFA45D5D">
-            <Label  Content="Voornaam:" FontWeight="Bold" FontSize="16"></Label>
-            <Label Foreground="White" x:Name="lblVoornaam" FontSize="16" FontWeight="Bold"></Label>
-            <Label Content="Achternaam:" FontWeight="Bold" FontSize="16"></Label>
-            <Label Foreground="White" x:Name="lblAchternaam" FontSize="16" FontWeight="Bold"></Label>
+        <ListBox  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="50,20,0,0" x:Name="lbxResults" HorizontalAlignment="Left" MinHeight="307" MinWidth="450"  SelectionChanged="lbxResults_SelectionChanged" Background="#FF833636" Foreground="White" BorderBrush="Black" VerticalAlignment="Top" Width="425"/>
+        <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  Background="#FFA45D5D">
+            <Label Content="Voornaam:" FontWeight="Bold" FontSize="14"/>
+
+            <Label Content="Achternaam:" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Geboortedatum:" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Vervaldatum_lidkaart:" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Gsm:" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Adres:" FontWeight="Bold" FontSize="14"/>
+            <Label Foreground="White" x:Name="lblStraat" FontSize="12" FontWeight="Bold"/>
+            <Label Foreground="White" x:Name="lblNummer" FontSize="12" FontWeight="Bold"/>
+            <Label Foreground="White" x:Name="lblPostcode" FontSize="12" FontWeight="Bold"/>
+            <Label Foreground="White" x:Name="lblGemeente" FontSize="12" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3">
+            <Label Foreground="White" x:Name="lblVoornaam" FontSize="12" FontWeight="Bold"/>
+            <Label Foreground="White" x:Name="lblAchternaam" FontSize="12" FontWeight="Bold"/>
+            <Label Margin="0,8,0,0" Foreground="White" x:Name="lblGeboorte" FontSize="12" FontWeight="Bold"/>
+            <Label Margin="15,2,0,5" Foreground="White" x:Name="lblDatum" FontSize="12" FontWeight="Bold"/>
+            <Label Margin="0,0,0,0" Foreground="White" x:Name="lblGsm" FontSize="12" FontWeight="Bold"/>
+
         </StackPanel>
         <Image x:Name="imgHome" Grid.Column="1" HorizontalAlignment="Center" Height="80" Width="200" Grid.Row="0" VerticalAlignment="Center" Source="download.gif"/>
         <Button Grid.Row="0" Grid.Column="0" x:Name="btnHome" MinWidth="121" MinHeight="34" Margin="0,5"  Background="#FF833636" Content="Home" Foreground="White" BorderBrush="Black" Click="btnHome_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>

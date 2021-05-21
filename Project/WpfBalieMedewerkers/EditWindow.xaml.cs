@@ -53,7 +53,7 @@ namespace WpfBalieMedewerkers
             }
 
             // herlaad hoofdvenster, en sluit dit venster
-            mainWin.ReloadEmployees(emp.Id);
+            mainWin.ReloadEmployees(emp.Lidnummer);
             this.Close();
         }
     }

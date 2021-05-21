@@ -24,14 +24,16 @@
         <TextBox Grid.Column="1" x:Name="txtFirst" Margin="0,0,0,10" Padding="5" />
         <Label Grid.Row="1" Content="Achternaam: "/>
         <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtLast" Margin="0,0,0,10" Padding="5" />
-        <Label Grid.Row="2" Content="Email: "/>
+        <Label Grid.Row="2" Content="Geboortedatum: "/>
         <TextBox Grid.Column="1" Grid.Row="2"  x:Name="txtEmail" Margin="0,0,0,10" Padding="5" />
         <Label Grid.Row="3" Content="Telefoon: "/>
         <TextBox Grid.Column="1" Grid.Row="3"  x:Name="txtTel" Margin="0,0,0,10" Padding="5" />
-        <Label Grid.Row="4" Content="Birthdate: "/>
-        <DatePicker x:Name="datBirth" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Top"/>
-        <Label Grid.Row="5" Content="Geslacht: "/>
-        <StackPanel Grid.Column="1" Grid.Row="5">
+        <Label Grid.Row="4" Content="Geboortedatum: "/>
+        <TextBox Grid.Column="1" Grid.Row="4"  x:Name="txtgeboortedatum" Margin="0,0,0,10" Padding="5" />
+        <Label Grid.Row="5" Content="Birthdate: "/>
+        <DatePicker x:Name="datBirth" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Top"/>
+        <Label Grid.Row="6" Content="Geslacht: "/>
+        <StackPanel Grid.Column="1" Grid.Row="6">
             <RadioButton GroupName="grpGender" x:Name="rbnMale" Content="man" />
             <RadioButton GroupName="grpGender" x:Name="rbnFemale" Content="vrouw" />
             <RadioButton GroupName="grpGender" x:Name="rbnUnknown" Content="onbekend" />
