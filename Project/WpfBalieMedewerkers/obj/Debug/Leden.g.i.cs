@@ -129,7 +129,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 46 "..\..\Leden.xaml"
+        #line 45 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image imgHome;
         
@@ -137,7 +137,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 47 "..\..\Leden.xaml"
+        #line 46 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnHome;
         
@@ -145,7 +145,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 48 "..\..\Leden.xaml"
+        #line 47 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnFetch;
         
@@ -153,7 +153,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 49 "..\..\Leden.xaml"
+        #line 48 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnDelete;
         
@@ -161,7 +161,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 50 "..\..\Leden.xaml"
+        #line 49 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnModify;
         
@@ -169,7 +169,7 @@ namespace WpfBalieMedewerkers {
         #line hidden
         
         
-        #line 51 "..\..\Leden.xaml"
+        #line 50 "..\..\Leden.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnInsert;
         
@@ -251,7 +251,7 @@ namespace WpfBalieMedewerkers {
             case 13:
             this.btnHome = ((System.Windows.Controls.Button)(target));
             
-            #line 47 "..\..\Leden.xaml"
+            #line 46 "..\..\Leden.xaml"
             this.btnHome.Click += new System.Windows.RoutedEventHandler(this.btnHome_Click);
             
             #line default
@@ -260,7 +260,7 @@ namespace WpfBalieMedewerkers {
             case 14:
             this.btnFetch = ((System.Windows.Controls.Button)(target));
             
-            #line 48 "..\..\Leden.xaml"
+            #line 47 "..\..\Leden.xaml"
             this.btnFetch.Click += new System.Windows.RoutedEventHandler(this.btnFetch_Click);
             
             #line default
@@ -269,7 +269,7 @@ namespace WpfBalieMedewerkers {
             case 15:
             this.btnDelete = ((System.Windows.Controls.Button)(target));
             
-            #line 49 "..\..\Leden.xaml"
+            #line 48 "..\..\Leden.xaml"
             this.btnDelete.Click += new System.Windows.RoutedEventHandler(this.btnDelete_Click);
             
             #line default
@@ -278,7 +278,7 @@ namespace WpfBalieMedewerkers {
             case 16:
             this.btnModify = ((System.Windows.Controls.Button)(target));
             
-            #line 50 "..\..\Leden.xaml"
+            #line 49 "..\..\Leden.xaml"
             this.btnModify.Click += new System.Windows.RoutedEventHandler(this.btnModify_Click);
             
             #line default
@@ -287,7 +287,7 @@ namespace WpfBalieMedewerkers {
             case 17:
             this.btnInsert = ((System.Windows.Controls.Button)(target));
             
-            #line 51 "..\..\Leden.xaml"
+            #line 50 "..\..\Leden.xaml"
             this.btnInsert.Click += new System.Windows.RoutedEventHandler(this.btnNew_Click);
             
             #line default
