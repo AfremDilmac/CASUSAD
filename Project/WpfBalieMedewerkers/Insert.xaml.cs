@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace WpfBalieMedewerkers
     {
         // referentie naar hoofdvenster
         Medewerker mainWin;
+        Library leed;
 
         // connectiestring nodig om te connecteren met de databank
         string connString = ConfigurationManager.AppSettings["connString"];
@@ -40,13 +42,25 @@ namespace WpfBalieMedewerkers
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            string firstname = txtFirst.Text;
-            string lastname = txtLast.Text;
-            Library emp = new Library(0, firstname, lastname);
-            int newId = emp.InsertInDb();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                leed.Lidnummer = txtLidnummer.Text;
+                leed.Gsm = txtGsm.Text;
+                leed.Gemeente = txtGemeente.Text;
+                leed.Achternaam = txtLast.Text;
+                leed.Nummer = txtNummer.Text;
+                leed.Postcode = txtPostcode.Text;
+                leed.Straat = txtStraat.Text;
+
+
+                DateTime geboortedatum = leed.Geboortedatum;
+                DateTime vervaldatum_lidkaart = leed.vervaldatum_lidkaart;
+                leed.InsertInDb();
+            }
+
 
             // herlaad hoofdvenster, en sluit dit venster
-            mainWin.ReloadEmployees(newId);
+            mainWin.ReloadEmployees(leed.Lidnummer);
             this.Close();
         }
     }

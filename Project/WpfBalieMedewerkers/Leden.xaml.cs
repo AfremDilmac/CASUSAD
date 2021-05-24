@@ -29,7 +29,7 @@ namespace WpfBalieMedewerkers
             ReloadEmployees(null);
         }
      
-        public void ReloadEmployees(int? selectedId)
+        public void ReloadEmployees(string selectedId)
         {
             // wis de lijst
             lbxResults.Items.Clear();
@@ -65,26 +65,17 @@ namespace WpfBalieMedewerkers
         {
             ListBoxItem li = (ListBoxItem)lbxResults.SelectedItem;
             if (li == null) return;
-            int id = (int)li.Tag;
+            string id = (string)li.Tag;
             Library mwd = Library.GetById(id);
-            string firstname = mwd.Voornaam;
-            string lastname = mwd.Achternaam;
-            string geboortedatum = mwd.Geboortedatum;
-            string straat = mwd.Straat;
-            int nummer = mwd.Nummer;
-            int postcode = mwd.Postcode;
-            string gemeente = mwd.Gemeente;
-            string vervaldatum = mwd.Vervaldatum_Lidkaart;
-            string gsm = mwd.Gsm;
-            lblAchternaam.Content = lastname;
-            lblVoornaam.Content = firstname;
-            lblDatum.Content = vervaldatum;
-            lblGeboorte.Content = geboortedatum;
-            lblGemeente.Content = gemeente;
-            lblGsm.Content = gsm;
-            lblNummer.Content = nummer;
-            lblPostcode.Content = postcode;
-            lblStraat.Content = straat;
+            lblAchternaam.Content = mwd.Achternaam;
+            lblVoornaam.Content = mwd.Voornaam;
+            lblDatum.Content = mwd.vervaldatum_lidkaart;
+            lblGeboorte.Content = mwd.Geboortedatum;
+            lblGemeente.Content = mwd.Gemeente;
+            lblGsm.Content = mwd.Gsm;
+            lblNummer.Content = mwd.Nummer;
+            lblPostcode.Content = mwd.Postcode;
+            lblStraat.Content = mwd.Straat;
             
 
 
