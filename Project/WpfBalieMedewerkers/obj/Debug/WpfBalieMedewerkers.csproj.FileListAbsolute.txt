@@ -52,3 +52,6 @@ C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Inse
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Insert.baml
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Leden.g.cs
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\obj\Debug\Leden.baml
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ItemsLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ItemsLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\WpfBalieMedewerkers\bin\Debug\ItemsLibrary.dll.config

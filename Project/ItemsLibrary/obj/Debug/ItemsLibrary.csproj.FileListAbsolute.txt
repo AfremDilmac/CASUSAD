@@ -1,2 +1,7 @@
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.csprojAssemblyReference.cache
 C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\bin\Debug\ItemsLibrary.dll.config
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\bin\Debug\ItemsLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\bin\Debug\ItemsLibrary.pdb
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.dll
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.pdb
