@@ -1,0 +1,2 @@
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.csprojAssemblyReference.cache
+C:\Users\Afrem\Desktop\github\CASUSAD\Project\ItemsLibrary\obj\Debug\ItemsLibrary.csproj.CoreCompileInputs.cache

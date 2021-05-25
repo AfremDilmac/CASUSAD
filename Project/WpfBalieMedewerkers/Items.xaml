@@ -8,7 +8,24 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Items">
 
-    <Grid>
-        <TextBlock Text="Items"></TextBlock>
+    <Grid Background="#FFA45D5D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Grid.RowSpan="3" x:Name="Main" Margin="10" NavigationUIVisibility="Hidden"/>
+        <Image x:Name="imgHome" Grid.Column="1" HorizontalAlignment="Center" Height="80" Width="200" Grid.Row="0" VerticalAlignment="Center" Source="download.gif"/>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="btnHome" MinWidth="121" MinHeight="34" Margin="0,5"  Background="#FF833636" Content="Home" Foreground="White" BorderBrush="Black" Click="btnHome_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListBox  ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Hidden"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,10,0,0" x:Name="lbxResults" HorizontalAlignment="Left" MinHeight="307" MinWidth="450"  SelectionChanged="lbxResults_SelectionChanged" Background="#FF833636" Foreground="White" BorderBrush="Black" VerticalAlignment="Top" Width="530" Height="320">
+            <WrapPanel x:Name="wrpPanel" Height="310" Width="520"></WrapPanel>
+        </ListBox>
+
     </Grid>
 </Page>
